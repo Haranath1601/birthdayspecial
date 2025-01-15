@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background-color: #ffebf0;
+            color: #333;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff4081;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 10px 20px;
+        }
+
+        .button {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #e63673;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .surprise {
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 90%;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <p>Wishing you a day filled with love, laughter, and unforgettable moments!</p>
+    <div class="button">
+        <button id="revealButton">Tap for a Surprise</button>
+    </div>
+    <div class="hidden" id="surpriseContent">
+        <div class="surprise">
+            <img src="https://www.jiomart.com/images/product/original/rvdbx9iq2q/pecial-you-pastel-pink-happy-birthday-balloons-theme-decoration-for-girls-with-white-hbd-banner-pastel-color-balloons-set-of-53pcs-product-images-orvdbx9iq2q-p602642411-4-202306250249.jpg?im=Resize=(500,500)" alt="Birthday Celebration">
+            <p>You are truly special, and today is all about celebrating you!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('revealButton').addEventListener('click', function () {
+            const surpriseContent = document.getElementById('surpriseContent');
+            if (surpriseContent.classList.contains('hidden')) {
+                surpriseContent.classList.remove('hidden');
+                this.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
